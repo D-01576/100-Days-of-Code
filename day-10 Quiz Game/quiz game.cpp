@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-struct quiz
-{
+struct quiz{
 	string question;
 	string options;
 	int key;
