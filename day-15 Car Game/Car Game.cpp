@@ -88,25 +88,44 @@ void moment()
 			break;
 		}
 	}
-	Sleep(80);
+	Sleep(50);
+
 	opX[0]++;
+	Sleep(25);
+
 	opX[1]++;
+	Sleep(25);
+
 	opX[2]++;
+	Sleep(25);
+	
 	srand(time(0));
-	for (int i = 0; i < rand() % 3 + 3; i++)
+	for (int i = 0; i < rand() % 3 + 3; i++){
 		if (opX[i] == 12)
 		{
-			Sleep(300);
-			opY[i] = rand() % 8 + 3;
+			opY[i] = rand() % 12 + 0;
 			opX[i] = 0;
 			score++;
 		}
+	}
 	for (int i = 0; i < 4; i++)
 	{
 		if (carX == opX[i] && carY == opY[i])
 		{
 			gameover = true;
 		}
+	}
+	if(carX == 12){
+		carX = 11;
+	}
+	if(carX == -1){
+		carX = 0;
+	}
+	if(carY==-1){
+		carY = 0;
+	}
+	if(carY==12){
+		carY = 11;
 	}
 }
 int main()
