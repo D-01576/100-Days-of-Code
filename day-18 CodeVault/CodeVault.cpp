@@ -63,8 +63,8 @@ void CodeVault::home(){
 	else {
 		cout<<"Invalid key\n";
 	}
+	opt.savedata();
 }while(choice != 0);
-opt.savedata();
 }
 
 void CodeVault::store(){
